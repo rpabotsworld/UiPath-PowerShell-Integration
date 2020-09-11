@@ -1,0 +1,7 @@
+Param(
+    [Parameter(Mandatory=$false)] [string]$ServiceState#,
+	#[Parameter(Mandatory=$true)] [string]$OutputFilePath
+	
+   )
+
+Get-Service | Where-Object {$_.Status -eq "Stopped"}
